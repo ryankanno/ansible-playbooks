@@ -1,0 +1,15 @@
+---
+  - name: docker | docker_provider.yml >> create docker provider
+    hosts: localhost
+    connection: local
+    gather_facts: false
+    vars:
+      digital_ocean:
+        client_id: "{{ lookup('env','DO_CLIENT_ID') }}"
+        api_key: "{{ lookup('env','DO_API_KEY') }}"
+        unique_name: yes
+        wait_timeout: 600
+    vars_files:
+      - ../vars/droplets.yml
+    tasks:
+      - include: ../tasks/digital_ocean_droplet_creator.yml

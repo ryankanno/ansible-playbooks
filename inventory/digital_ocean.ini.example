@@ -1,0 +1,6 @@
+[digital_ocean]
+
+client_id = <your digital ocean client id>
+api_key = <your digital ocean api key>
+cache_path = /tmp
+cache_max_age = 300

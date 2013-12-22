@@ -1,0 +1,16 @@
+---
+  - name: digital_ocean | digital_ocean_droplet_creator.yml >> create droplets
+    digital_ocean: >
+      state=present
+      command=droplet
+      api_key={{ digital_ocean.api_key }}
+      client_id={{ digital_ocean.client_id }}
+      image_id={{ item.image_id }}
+      name={{ item.name }}j
+      region_id={{ item.region_id }}
+      size_id={{ item.size_id }}
+      ssh_key_ids={{ item.ssh_key_ids }}
+      unique_name={{ digital_ocean.unique_name }}
+      wait_timeout={{ digital_ocean.wait_timeout }}
+    with_items: digital_ocean.droplets
+    when: digital_ocean.droplets is defined and digital_ocean.droplets
