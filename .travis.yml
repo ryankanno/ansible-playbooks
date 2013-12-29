@@ -1,0 +1,7 @@
+language: python
+python:
+  - 2.7
+install:
+  - pip install -r requirements.txt
+script:
+  - ansible-playbook --syntax-check -i tests/ansible.test.inventory ./digital_ocean/ubuntu-13.04:docker:digital_ocean.yml
