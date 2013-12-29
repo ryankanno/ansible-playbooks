@@ -1,5 +1,7 @@
 # ansible-playbooks
 
+[![Build Status](https://travis-ci.org/ryankanno/ansible-playbooks.png?branch=master)](https://travis-ci.org/ryankanno/ansible-playbooks)
+
 ## setup
 
   * create `digital_ocean.ini` in the inventory directory. use [inventory/digital_ocean.ini.example](https://github.com/ryankanno/ansible-playbooks/blob/master/inventory/digital_ocean.ini.example)
